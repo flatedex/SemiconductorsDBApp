@@ -1,0 +1,22 @@
+﻿<Window x:Class="SemiconductorsDBApp.Operation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Choose operation" Height="450" Width="420" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="From:" Margin="43,31,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="42" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedWarehouse" Margin="117,29,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectedIndex="0" SelectionChanged="SelectedWarehouse_SelectionChanged"/>
+        <TextBlock TextWrapping="Wrap" Text="Material:" Margin="25,128,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="67" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedMaterial" Margin="117,125,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectedIndex="0"/>
+        <TextBlock TextWrapping="Wrap" Text="Quantity:" Margin="25,188,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="67" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <TextBox x:Name="QuantityData" HorizontalAlignment="Left" Margin="117,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontFamily="Arial" FontSize="14"/>
+        <Button x:Name="ConfirmBtn" Content="Confirm" HorizontalAlignment="Center" Margin="0,342,0,0" FontFamily="Arial" FontSize="14" Width="120" Height="54" VerticalAlignment="Top" Click="ConfirmBtn_Click"/>
+        <TextBlock TextWrapping="Wrap" Text="Operation:" Margin="15,242,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="67" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedOperation" Margin="117,239,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="205" SelectedIndex="0"/>
+        <TextBlock TextWrapping="Wrap" Text="To:" Margin="59,79,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="23" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedProd" Margin="117,76,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectedIndex="0"/>
+    </Grid>
+</Window>

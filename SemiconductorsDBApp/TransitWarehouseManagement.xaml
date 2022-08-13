@@ -1,0 +1,24 @@
+﻿<Window x:Class="SemiconductorsDBApp.TransitWarehouseManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Transit Warehouses" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="TransitWHS" AutoGenerateColumns="False" Margin="0,0,84,28" HorizontalAlignment="Right" Width="288" Height="348" VerticalAlignment="Bottom" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding name}" Header="Title" Width="143"/>
+                <DataGridTextColumn Binding="{Binding type}" Header="Type" Width="143"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock TextWrapping="Wrap" Text="Existing transit WHs:" Margin="0,10,158,0" FontFamily="Arial" FontSize="14" Height="17" VerticalAlignment="Top" HorizontalAlignment="Right" Width="140" RenderTransformOrigin="0.551,2.283"/>
+        <Button x:Name="AddBtn" Margin="45,76,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="AddBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Add TW"/></TextBlock>
+        </Button>
+        <Button x:Name="RemoveBtn" Margin="45,164,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="RemoveBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Remove TW"/></TextBlock>
+        </Button>
+    </Grid>
+</Window>

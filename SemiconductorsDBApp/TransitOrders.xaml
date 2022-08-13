@@ -1,0 +1,39 @@
+﻿<Window x:Class="SemiconductorsDBApp.TransitOrders"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Transit Orders" Height="450" Width="1067" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Button x:Name="ViewBtn" Margin="45,76,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="ViewBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="View transit"/><LineBreak/><Run Text="order"/></TextBlock>
+        </Button>
+        <TextBlock TextWrapping="Wrap" Text="Current warehouse:" Margin="376,24,557,0" FontFamily="Arial" FontSize="14" Height="17" VerticalAlignment="Top"/>
+        <ComboBox x:Name="SelectedWarehouse" Margin="534,20,413,0" VerticalAlignment="Top" SelectedIndex="0" SelectionChanged="SelectedWarehouse_SelectionChanged"/>
+        <DataGrid x:Name="Arrivals" AutoGenerateColumns="False" Margin="261,0,0,50" HorizontalAlignment="Left" Width="308" Height="238" VerticalAlignment="Bottom" IsReadOnly="True" SelectedCellsChanged="Arrivals_SelectedCellsChanged" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding to_id}" Header="Number" Width="150"/>
+                <DataGridTextColumn Binding="{Binding arrival_time}" Header="Arrival time" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="PlaceBtn" Margin="45,164,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="PlaceBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Place transit"/><LineBreak/><Run Text="order"/></TextBlock>
+        </Button>
+        <TextBlock TextWrapping="Wrap" Text="Arrivals:" Margin="388,102,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="54" Height="17" VerticalAlignment="Top"/>
+        <DataGrid x:Name="Departures" AutoGenerateColumns="False" Margin="624,0,0,50" HorizontalAlignment="Left" Width="308" Height="238" VerticalAlignment="Bottom" IsReadOnly="True" SelectionMode="Single" SelectedCellsChanged="Departures_SelectedCellsChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding to_id}" Header="Number" Width="150"/>
+                <DataGridTextColumn Binding="{Binding departure_time}" Header="Departure time" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock TextWrapping="Wrap" Text="Departures:" Margin="738,102,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="80" Height="17" VerticalAlignment="Top"/>
+        <Button x:Name="SendBtn" Margin="45,250,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="SendBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Send transit"/><LineBreak/><Run Text="order"/></TextBlock>
+        </Button>
+        <Button x:Name="TakeOffBtn" Margin="45,331,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="TakeOffBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Take off transit"/><LineBreak/><Run Text="order"/></TextBlock>
+        </Button>
+    </Grid>
+</Window>

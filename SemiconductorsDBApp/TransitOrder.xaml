@@ -1,0 +1,27 @@
+﻿<Window x:Class="SemiconductorsDBApp.TransitOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="TO" Height="450" Width="800" Loaded="Window_Loaded" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="69,40,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="92,84,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,136,0,0" TextWrapping="Wrap" Text="Status:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,181,0,0" TextWrapping="Wrap" Text="Departured:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="60,229,0,0" TextWrapping="Wrap" Text="Arrival:" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <DataGrid x:Name="MovedMaterials" AutoGenerateColumns="False" Margin="0,0,30,0" Height="326" VerticalAlignment="Center" IsReadOnly="True" HorizontalAlignment="Right" Width="435">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding title}" Header="Material" Width="225"/>
+                <DataGridTextColumn Binding="{Binding quantity}" Header="Quantity" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock x:Name="Start" HorizontalAlignment="Left" Margin="140,40,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock x:Name="End" HorizontalAlignment="Left" Margin="140,84,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock x:Name="Status" HorizontalAlignment="Left" Margin="140,136,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock x:Name="DepartTime" HorizontalAlignment="Left" Margin="140,181,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+        <TextBlock x:Name="ArrivalTime" HorizontalAlignment="Left" Margin="140,229,0,0" TextWrapping="Wrap" Text="None" VerticalAlignment="Top" FontFamily="Arial" FontSize="18"/>
+    </Grid>
+</Window>

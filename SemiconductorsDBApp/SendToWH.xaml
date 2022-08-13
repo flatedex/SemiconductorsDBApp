@@ -1,0 +1,17 @@
+﻿<Window x:Class="SemiconductorsDBApp.SendToWH"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Send to WH" Height="248" Width="295" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Closed="Window_Closed" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="Quantity:" Margin="65,28,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="67" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <TextBox x:Name="QuantityData" HorizontalAlignment="Left" Margin="148,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontFamily="Arial" FontSize="14"/>
+        <TextBlock TextWrapping="Wrap" Text="Warehouse:" Margin="47,75,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="76" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedWarehouse" Margin="148,73,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectedIndex="0"/>
+        <Button x:Name="ConfirmBtn" Content="Confirm" HorizontalAlignment="Center" Margin="0,141,0,37" FontFamily="Arial" FontSize="14" Width="120" Click="ConfirmBtn_Click"/>
+
+    </Grid>
+</Window>

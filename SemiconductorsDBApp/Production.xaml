@@ -1,0 +1,34 @@
+﻿<Window x:Class="SemiconductorsDBApp.Production"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Production" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid x:Name="ProductionOrders" Margin="0,0,10,25" HorizontalAlignment="Right" Width="435" Height="346" VerticalAlignment="Bottom" IsReadOnly="True" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="ProductionOrders_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding po_id}" Header="Number" Width="70"/>
+                <DataGridTextColumn Binding="{Binding title}" Header="Purpose" Width="200"/>
+                <DataGridTextColumn Binding="{Binding status}" Header="Status" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock TextWrapping="Wrap" Text="Production orders:" Margin="0,15,168,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Right" Width="119" Height="17" VerticalAlignment="Top"/>
+        <Button x:Name="OpenOrderBtn" Margin="45,76,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="OpenOrderBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Open production"/></TextBlock>
+        </Button>
+        <Button x:Name="CloseBtn" Margin="45,164,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="CloseBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Close production"/></TextBlock>
+        </Button>
+        <Button x:Name="OperationBtn" Margin="45,245,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="OperationBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Make operation"/></TextBlock>
+        </Button>
+        <Button x:Name="ManageBtn" Margin="45,326,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="ManageBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Manage WH"/></TextBlock>
+        </Button>
+        <Button x:Name="ViewBtn" Margin="206,0,0,0" Cursor="Hand" Height="43" VerticalAlignment="Center" HorizontalAlignment="Left" Width="114" FontFamily="Arial" FontSize="16" IsEnabled="False" Click="ViewBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="View OPs"/></TextBlock>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="SemiconductorsDBApp.ProductionManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Production manager" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="Current warehouse:" Margin="415,25,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="134" Height="17" VerticalAlignment="Top"/>
+        <ComboBox x:Name="SelectedWarehouse" Margin="0,18,113,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="120" SelectionChanged="SelectedWarehouse_SelectionChanged" SelectedIndex="0"/>
+        <DataGrid x:Name="AvailableMaterials" AutoGenerateColumns="False" Margin="0,0,10,10" HorizontalAlignment="Right" Width="435" Height="348" VerticalAlignment="Bottom" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding title}" Header="Material" Width="225"/>
+                <DataGridTextColumn Binding="{Binding quantity}" Header="Quantity" Width="200"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BuyBtn" Margin="45,76,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="BuyBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Buy materials"/></TextBlock>
+        </Button>
+        <Button x:Name="SellBtn" Margin="45,164,0,0" Cursor="Hand" Height="43" VerticalAlignment="Top" HorizontalAlignment="Left" Width="140" FontFamily="Arial" FontSize="16" Click="SellBtn_Click">
+            <TextBlock TextAlignment="Center"><Run Text="Sell materials"/></TextBlock>
+        </Button>
+    </Grid>
+</Window>

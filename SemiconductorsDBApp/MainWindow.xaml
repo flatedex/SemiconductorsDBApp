@@ -1,0 +1,24 @@
+﻿<Window x:Class="SemiconductorsDBApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Profile" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Margin="286,39,286,0" FontFamily="Arial" FontSize="24" RenderTransformOrigin="0.505,1.412" Height="28" VerticalAlignment="Top"> Choose your profile:</TextBlock>
+        <Button x:Name="WarhouseManagerBtn" Cursor="Hand" Margin="55,104,0,0" VerticalAlignment="Top" Height="150" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Width="290" Click="WarhouseManagerBtn_Click">
+            <TextBlock TextAlignment="Center">Warehouse <LineBreak/> manager</TextBlock>
+        </Button>
+        <Button x:Name="ProductionBtn" Cursor="Hand" HorizontalAlignment="Right" Margin="0,104,57,0" FontFamily="Arial" FontSize="16" VerticalAlignment="Top" Height="150" Width="290" Click="ProductionBtn_Click">
+            <TextBlock TextAlignment="Center">Production <LineBreak/> employee</TextBlock>
+        </Button>
+        <Button x:Name="ProductManagerBtn" Cursor="Hand" FontFamily="Arial" FontSize="16" Width="290" HorizontalAlignment="Left" Margin="55,0,0,25" Height="150" VerticalAlignment="Bottom" Click="ProductManagerBtn_Click">
+            <TextBlock TextAlignment="Center">Production <LineBreak/> manager</TextBlock>
+        </Button>
+        <Button x:Name="RoutesManagerBtn" Cursor="Hand" FontFamily="Arial" FontSize="16" Width="290" HorizontalAlignment="Right" Margin="0,0,57,25" Height="150" VerticalAlignment="Bottom" Click="RoutesManagerBtn_Click">
+            <TextBlock TextAlignment="Center">Routes <LineBreak/> manager</TextBlock>
+        </Button>
+    </Grid>
+</Window>

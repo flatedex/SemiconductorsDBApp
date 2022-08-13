@@ -1,0 +1,14 @@
+﻿<Window x:Class="SemiconductorsDBApp.DeleteTW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SemiconductorsDBApp"
+        mc:Ignorable="d"
+        Title="Delete transit WH" Height="248" Width="293" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <TextBlock TextWrapping="Wrap" Text="Warehouse:" Margin="25,31,0,0" FontFamily="Arial" FontSize="14" HorizontalAlignment="Left" Width="76" Height="17" VerticalAlignment="Top" RenderTransformOrigin="0.516,-0.683"/>
+        <ComboBox x:Name="SelectedWarehouse" Margin="117,29,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectedIndex="0"/>
+        <Button x:Name="ConfirmBtn" Content="Confirm" HorizontalAlignment="Center" FontFamily="Arial" FontSize="14" Width="120" Height="54" VerticalAlignment="Top" Click="ConfirmBtn_Click" Margin="0,127,0,0"/>
+    </Grid>
+</Window>
